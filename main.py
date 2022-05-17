@@ -4,7 +4,7 @@ class Pracownik:
     self.wynagrodzenie_brutto=int(wynagrodzenie)
 
 
-  def wynagrodzenie_netto(self):
+  def wynagrodzenie_netto(self)-->float:
 
       podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne=self.wynagrodzenie_brutto
 
@@ -28,7 +28,7 @@ class Pracownik:
 
       return netto
 
-  def skladki_pracodawcy(self):
+  def skladki_pracodawcy(self)-->float:
     
     podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne=self.wynagrodzenie_brutto
     
@@ -36,7 +36,7 @@ class Pracownik:
     
     return skladki_obciazajace_pracodawce
 
-  def koszty_pracodawcy(self):
+  def koszty_pracodawcy(self)-->float:
     
     podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne=self.wynagrodzenie_brutto
     
