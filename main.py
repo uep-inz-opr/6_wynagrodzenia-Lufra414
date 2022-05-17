@@ -1,10 +1,12 @@
+
+
 class Pracownik:
   def __init__(self, imie, wynagrodzenie):
     self.imie_pracownika=str(imie)
     self.wynagrodzenie_brutto=int(wynagrodzenie)
 
 
-  def wynagrodzenie_netto(self)-->float:
+  def wynagrodzenie_netto(self)->float:
 
       podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne=self.wynagrodzenie_brutto
 
@@ -28,7 +30,7 @@ class Pracownik:
 
       return netto
 
-  def skladki_pracodawcy(self)-->float:
+  def skladki_pracodawcy(self)->float:
     
     podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne=self.wynagrodzenie_brutto
     
@@ -36,7 +38,7 @@ class Pracownik:
     
     return skladki_obciazajace_pracodawce
 
-  def koszty_pracodawcy(self)-->float:
+  def koszty_pracodawcy(self)->float:
     
     podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne=self.wynagrodzenie_brutto
     
@@ -56,4 +58,5 @@ for index in range(0,i):
   pracownik_index=Pracownik(pracownicy[index][0],pracownicy[index][1])
   laczny_koszt_pracodawcy+=pracownik_index.koszty_pracodawcy()
   print(pracownicy[index][0]+ " " +str(format(pracownik_index.wynagrodzenie_netto(),'.2f'))+ " " +str(pracownik_index.skladki_pracodawcy())+ " " +str(pracownik_index.koszty_pracodawcy()))
+
 print(float(format(laczny_koszt_pracodawcy,'2f')))
