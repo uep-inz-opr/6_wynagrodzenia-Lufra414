@@ -1,12 +1,10 @@
-
-
 class Pracownik:
   def __init__(self, imie, wynagrodzenie):
     self.imie_pracownika=str(imie)
     self.wynagrodzenie_brutto=int(wynagrodzenie)
 
 
-  def wynagrodzenie_netto(self)->float:
+  def wynagrodzenie_netto(self):
 
       podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne=self.wynagrodzenie_brutto
 
@@ -30,15 +28,15 @@ class Pracownik:
 
       return netto
 
-  def skladki_pracodawcy(self)->float:
+  def skladki_pracodawcy(self):
     
     podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne=self.wynagrodzenie_brutto
     
     skladki_obciazajace_pracodawce=round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.0976,2)+round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.065,2)+round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.0193,2)+round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.0245,2)+round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.001,2)
     
-    return skladki_pracodawcy
+    return skladki_obciazajace_pracodawce
 
-  def koszty_pracodawcy(self)->float:
+  def koszty_pracodawcy(self):
     
     podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne=self.wynagrodzenie_brutto
     
