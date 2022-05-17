@@ -12,7 +12,7 @@ class Pracownik:
 
       skladki_na_ubezpieczenia_spoleczne_finansowane_przez_pracownika=round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.0976,2) + round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.015,2) + round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.0245,2)
             
-      podstawa_wymiaru_skladki_na_ubezpieczenie_zdrowotne=podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne-skladki_na_ubezpieczenia_spoleczne_finansowane_przez_pracownika
+      podstawa_wymiaru_skladki_na_ubezpieczenie_zdrowotne=round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne,2)-round(skladki_na_ubezpieczenia_spoleczne_finansowane_przez_pracownika,2)
       
       skladka_na_ubezpieczenie_zdrowotne_do_pobrania_z_wynagrodzenia = round(podstawa_wymiaru_skladki_na_ubezpieczenie_zdrowotne*0.09,2)
       
@@ -20,9 +20,9 @@ class Pracownik:
       
       koszty_uzyskania_przychodu=111.25
           
-      podstawa_obliczenia_zaliczki_podatek_dochodowy=self.wynagrodzenie_brutto-koszty_uzyskania_przychodu-skladki_na_ubezpieczenia_spoleczne_finansowane_przez_pracownika
+      podstawa_obliczenia_zaliczki_podatek_dochodowy=round(self.wynagrodzenie_brutto-koszty_uzyskania_przychodu,2)-round(skladki_na_ubezpieczenia_spoleczne_finansowane_przez_pracownika,2)
 
-      zaliczka_podatek_dochodowy_przed_odliczeniem_skladki_zdrowotnej=round((podstawa_obliczenia_zaliczki_podatek_dochodowy*0.18),2) - 46.33
+      zaliczka_podatek_dochodowy_przed_odliczeniem_skladki_zdrowotnej=round(round(podstawa_obliczenia_zaliczki_podatek_dochodowy*0.18),2) - 46.33
         
       zaliczka_na_podatek_dochodowy_do_pobrania=round(zaliczka_podatek_dochodowy_przed_odliczeniem_skladki_zdrowotnej-skladka_na_ubezpieczenie_zdrowotne_do_odliczenia_od_podatku,0)
       
@@ -74,7 +74,7 @@ class Pracownik:
 
       skladki_na_ubezpieczenia_spoleczne_finansowane_przez_pracownika=round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.0976,2) + round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.015,2) + round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.0245,2)
             
-      podstawa_wymiaru_skladki_na_ubezpieczenie_zdrowotne=podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne-skladki_na_ubezpieczenia_spoleczne_finansowane_przez_pracownika
+      podstawa_wymiaru_skladki_na_ubezpieczenie_zdrowotne=round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne,2)-round(skladki_na_ubezpieczenia_spoleczne_finansowane_przez_pracownika,2)
       
       skladka_na_ubezpieczenie_zdrowotne_do_pobrania_z_wynagrodzenia = round(podstawa_wymiaru_skladki_na_ubezpieczenie_zdrowotne*0.09,2)
       
@@ -82,9 +82,9 @@ class Pracownik:
       
       koszty_uzyskania_przychodu=111.25
           
-      podstawa_obliczenia_zaliczki_podatek_dochodowy=self.wynagrodzenie_brutto-koszty_uzyskania_przychodu-skladki_na_ubezpieczenia_spoleczne_finansowane_przez_pracownika
+      podstawa_obliczenia_zaliczki_podatek_dochodowy=round(self.wynagrodzenie_brutto-koszty_uzyskania_przychodu,2)-round(skladki_na_ubezpieczenia_spoleczne_finansowane_przez_pracownika,2)
 
-      zaliczka_podatek_dochodowy_przed_odliczeniem_skladki_zdrowotnej=round((podstawa_obliczenia_zaliczki_podatek_dochodowy*0.18),2) - 46.33
+      zaliczka_podatek_dochodowy_przed_odliczeniem_skladki_zdrowotnej=round(round(podstawa_obliczenia_zaliczki_podatek_dochodowy*0.18),2) - 46.33
         
       zaliczka_na_podatek_dochodowy_do_pobrania=round(zaliczka_podatek_dochodowy_przed_odliczeniem_skladki_zdrowotnej-skladka_na_ubezpieczenie_zdrowotne_do_odliczenia_od_podatku,0)
       
