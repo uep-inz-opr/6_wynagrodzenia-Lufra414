@@ -22,11 +22,11 @@ class Pracownik:
           
       podstawa_obliczenia_zaliczki_podatek_dochodowy=self.wynagrodzenie_brutto-koszty_uzyskania_przychodu-skladki_na_ubezpieczenia_spoleczne_finansowane_przez_pracownika
 
-      zaliczka_podatek_dochodowy_przed_odliczeniem_skladki_zdrowotnej=round(podstawa_obliczenia_zaliczki_podatek_dochodowy*0.18,2) - 46.33
+      zaliczka_podatek_dochodowy_przed_odliczeniem_skladki_zdrowotnej=round((podstawa_obliczenia_zaliczki_podatek_dochodowy*0.18),2) - 46.33
         
-      zaliczka_na_podatek_dochodowy_do_pobrania=zaliczka_podatek_dochodowy_przed_odliczeniem_skladki_zdrowotnej-skladka_na_ubezpieczenie_zdrowotne_do_odliczenia_od_podatku
+      zaliczka_na_podatek_dochodowy_do_pobrania=round(zaliczka_podatek_dochodowy_przed_odliczeniem_skladki_zdrowotnej-skladka_na_ubezpieczenie_zdrowotne_do_odliczenia_od_podatku,0)
       
-      netto=self.wynagrodzenie_brutto-skladki_na_ubezpieczenia_spoleczne_finansowane_przez_pracownika-skladka_na_ubezpieczenie_zdrowotne_do_pobrania_z_wynagrodzenia-zaliczka_na_podatek_dochodowy_do_pobrania
+      netto=round(self.wynagrodzenie_brutto-skladki_na_ubezpieczenia_spoleczne_finansowane_przez_pracownika-skladka_na_ubezpieczenie_zdrowotne_do_pobrania_z_wynagrodzenia-zaliczka_na_podatek_dochodowy_do_pobrania,2)
 
       return netto
 
@@ -42,7 +42,7 @@ class Pracownik:
     
     podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne=self.wynagrodzenie_brutto
     
-    koszty_pracodawcy=round(round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne)+round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.0976,2)+round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.065,2)+round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.0193,2)+round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.0245,2)+round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.001,2),2)
+    koszty_pracodawcy=round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne+round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.0976,2)+round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.065,2)+round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.0193,2)+round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.0245,2)+round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.001,2))
     
     return koszty_pracodawcy
 laczny_koszt_pracodawcy=0
