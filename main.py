@@ -42,7 +42,7 @@ class Pracownik:
     
     podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne=self.wynagrodzenie_brutto
     
-    koszty_pracodawcy=round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne+round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.0976,2)+round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.065,2)+round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.0193,2)+round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.0245,2)+round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.001,2))
+    koszty_pracodawcy=round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne+round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.0976,2)+round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.065,2)+round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.0193,2)+round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.0245,2)+round(podstawa_wymiaru_skladek_na_ubezpieczenia_spoleczne*0.001,2),2)
     
     return koszty_pracodawcy
 laczny_koszt_pracodawcy=0
